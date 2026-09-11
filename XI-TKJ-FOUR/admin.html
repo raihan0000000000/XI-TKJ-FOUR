@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard | XI TKJ FOUR</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="admin-sidebar">
+
+        <div class="admin-brand">
+            <div class="admin-logo">👥</div>
+
+            <div>
+                <h2>ADMIN XI TKJ FOUR</h2>
+                <p>Dashboard Admin</p>
+            </div>
+        </div>
+
+
+        <nav class="admin-menu">
+
+    <a href="#dashboard"
+       class="admin-menu-item active"
+       onclick="selectAdminMenu(this, 'dashboard')">
+        🏠
+        <span>Dashboard</span>
+    </a>
+
+    <a href="#upload-masuk"
+       class="admin-menu-item"
+       onclick="selectAdminMenu(this, 'upload-masuk')">
+        🖼️
+        <span>Upload Masuk</span>
+        <b id="pendingBadge">0</b>
+    </a>
+
+    <a href="#kelola-galeri"
+       class="admin-menu-item"
+       onclick="selectAdminMenu(this, 'kelola-galeri')">
+        🖼️
+        <span>Kelola Galeri</span>
+    </a>
+
+    <a href="#kelola-video"
+       class="admin-menu-item"
+       onclick="selectAdminMenu(this, 'kelola-video')">
+        ▶️
+        <span>Kelola Video</span>
+    </a>
+
+    <a href="#data-anggota"
+       class="admin-menu-item"
+       onclick="selectAdminMenu(this, 'data-anggota')">
+        👥
+        <span>Data Anggota</span>
+    </a>
+
+    <a href="#pengaturan"
+       class="admin-menu-item"
+       onclick="selectAdminMenu(this, 'pengaturan')">
+        ⚙️
+        <span>Pengaturan</span>
+    </a>
+
+</nav>
+
+
+        <div class="admin-sidebar-bottom">
+
+            <strong>👥 &nbsp; XI TKJ FOUR</strong>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- KONTEN UTAMA -->
+    <main class="admin-main">
+
+        <!-- HEADER -->
+        <header class="admin-topbar">
+
+            <div>
+                <h1>ADMIN XI TKJ FOUR</h1>
+                <p>Dashboard Admin</p>
+            </div>
+
+            <div class="admin-user">
+                👤
+                <span>Admin</span>
+                <span>⌄</span>
+            </div>
+
+        </header>
+
+
+
+        <!-- DASHBOARD -->
+        <section id="dashboard"
+                 class="admin-content">
+
+            <!-- WELCOME -->
+            <div class="admin-welcome">
+
+                <div class="welcome-icon">
+                    👑
+                </div>
+
+                <div class="welcome-text">
+
+                    <p>Selamat Datang,</p>
+
+                    <h2>
+                        Admin XI TKJ FOUR
+                    </h2>
+
+                    <span>
+                        Kelola semua data upload, galeri,
+                        dan video dengan mudah.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- STATISTIK -->
+            <div class="admin-stats">
+
+                <div class="admin-stat-card">
+
+                    <div class="stat-icon">
+                        🖼️
+                    </div>
+
+                    <div>
+                        <span>Upload Foto Masuk</span>
+                        <strong id="adminPhotoCount">0</strong>
+                        <small>Menunggu persetujuan</small>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="stat-icon">
+                        ▶️
+                    </div>
+
+                    <div>
+                        <span>Upload Video Masuk</span>
+                        <strong id="adminVideoCount">0</strong>
+                        <small>Menunggu persetujuan</small>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="stat-icon">
+                        🖼️
+                    </div>
+
+                    <div>
+                        <span>Total Foto di Galeri</span>
+                        <strong id="totalPhotoCount">0</strong>
+                        <small>Foto yang sudah disetujui</small>
+                    </div>
+
+                </div>
+
+
+                <div class="admin-stat-card">
+
+                    <div class="stat-icon">
+                        ▶️
+                    </div>
+
+                    <div>
+                        <span>Total Video di Galeri</span>
+                        <strong id="totalVideoCount">0</strong>
+                        <small>Video yang sudah disetujui</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BAGIAN BAWAH -->
+            <div class="admin-dashboard-grid">
+
+
+                <!-- UPLOAD TERBARU -->
+                <section id="upload-masuk" class="upload-page">
+
+    <div class="upload-page-header">
+
+        <div class="upload-header-left">
+
+            <div class="upload-big-icon">
+                ☁️
+            </div>
+
+            <div>
+                <p>Upload Masuk</p>
+
+                <h2>Pengajuan Upload</h2>
+
+                <span>
+                    Berikut adalah file yang dikirim oleh siswa
+                    dan menunggu persetujuan admin.
+                </span>
+            </div>
+
+        </div>
+
+
+        <div class="upload-summary">
+
+            <div>
+                <span>Foto</span>
+                <strong id="incomingPhotoCount">0</strong>
+            </div>
+
+            <div>
+                <span>Video</span>
+                <strong id="incomingVideoCount">0</strong>
+            </div>
+
+            <div>
+                <span>Total</span>
+                <strong id="incomingTotalCount">0</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="upload-list-panel">
+
+        <div class="upload-list-header">
+
+            <div>
+                <h2>Daftar Upload Masuk</h2>
+            </div>
+
+            <div class="upload-tools">
+
+                <select id="adminCategoryFilter">
+
+                    <option value="all">
+                        Semua Kategori
+                    </option>
+
+                    <option value="Foto Bersama">
+                        Foto Bersama
+                    </option>
+
+                    <option value="Foto Random">
+                        Foto Random
+                    </option>
+
+                    <option value="Foto">
+                        Foto
+                    </option>
+
+                    <option value="Foto Kegiatan">
+                        Foto Kegiatan
+                    </option>
+
+                    <option value="Video Kegiatan">
+                        Video Kegiatan
+                    </option>
+
+                    <option value="Video Random">
+                        Video Random
+                    </option>
+
+                </select>
+
+
+                <input
+                    id="adminUploadSearch"
+                    type="search"
+                    placeholder="🔍 Cari nama file...">
+
+            </div>
+
+        </div>
+
+
+
+        <div class="upload-table-wrapper">
+
+            <table class="upload-table">
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            <input type="checkbox"
+                                   id="selectAllUploads">
+                        </th>
+
+                        <th>No.</th>
+
+                        <th>Preview</th>
+
+                        <th>Nama File</th>
+
+                        <th>Jenis</th>
+
+                        <th>Kategori</th>
+
+                        <th>Tanggal</th>
+
+                        <th>Status</th>
+
+                        <th>Aksi</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="adminUploadList">
+
+                    <tr>
+
+                        <td colspan="9"
+                            class="upload-empty">
+
+                            📭 Belum ada upload yang
+                            menunggu persetujuan.
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+
+        <div class="upload-bottom">
+
+            <label>
+
+                <input type="checkbox"
+                       id="selectAllUploadsBottom">
+
+                Pilih Semua
+
+            </label>
+
+
+            <div class="bulk-buttons">
+
+                <button
+                    class="approve-selected"
+                    type="button">
+
+                    ✓ Setujui Terpilih
+
+                </button>
+
+
+                <button
+                    class="reject-selected"
+                    type="button">
+
+                    × Tolak Terpilih
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+                <!-- MENU CEPAT -->
+                <section class="admin-panel quick-menu">
+
+                    <div class="admin-panel-header">
+
+                        <h2>
+                            ⚡ Menu Cepat
+                        </h2>
+
+                    </div>
+
+
+                    <div class="quick-grid">
+
+                        <a href="#kelola-galeri"
+                           class="quick-card">
+
+                            <div>🖼️</div>
+
+                            <strong>
+                                Kelola Galeri
+                            </strong>
+
+                            <small>
+                                Lihat & kelola foto
+                            </small>
+
+                        </a>
+
+
+                        <a href="#kelola-video"
+                           class="quick-card">
+
+                            <div>▶️</div>
+
+                            <strong>
+                                Kelola Video
+                            </strong>
+
+                            <small>
+                                Lihat & kelola video
+                            </small>
+
+                        </a>
+
+
+                        <a href="#upload-masuk"
+                           class="quick-card">
+
+                            <div>☁️</div>
+
+                            <strong>
+                                Upload Masuk
+                            </strong>
+
+                            <small>
+                                Lihat semua pengajuan
+                            </small>
+
+                        </a>
+
+
+                        <a href="#data-anggota"
+                           class="quick-card">
+
+                            <div>👥</div>
+
+                            <strong>
+                                Data Anggota
+                            </strong>
+
+                            <small>
+                                Kelola anggota kelas
+                            </small>
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- KELOLA GALERI -->
+            <section id="kelola-galeri"
+                     class="admin-section-placeholder">
+
+                <h2>🖼️ Kelola Galeri</h2>
+
+                <p>
+                    Bagian ini akan digunakan untuk
+                    menyetujui, menghapus, dan mengelola
+                    foto yang masuk.
+                </p>
+
+            </section>
+
+
+
+            <!-- KELOLA VIDEO -->
+            <section id="kelola-video"
+                     class="admin-section-placeholder">
+
+                <h2>▶️ Kelola Video</h2>
+
+                <p>
+                    Bagian ini akan digunakan untuk
+                    menyetujui, menghapus, dan mengelola
+                    video yang masuk.
+                </p>
+
+            </section>
+
+
+
+            <!-- DATA ANGGOTA -->
+            <section id="data-anggota"
+                     class="admin-section-placeholder">
+
+                <h2>👥 Data Anggota</h2>
+
+                <p>
+                    Data anggota kelas XI TKJ FOUR.
+                </p>
+
+            </section>
+
+
+
+            <!-- PENGATURAN -->
+            <section id="pengaturan"
+                     class="admin-section-placeholder">
+
+                <h2>⚙️ Pengaturan</h2>
+
+                <p>
+                    Pengaturan Admin XI TKJ FOUR.
+                </p>
+
+            </section>
+
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+        <footer class="admin-footer">
+
+            © 2026 XI TKJ FOUR
+            &nbsp; | &nbsp;
+            Admin Panel
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script type="module" src="firebase-services.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>

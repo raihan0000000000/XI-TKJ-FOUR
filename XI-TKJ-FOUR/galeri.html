@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Galeri | XI TKJ FOUR</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="brand">
+
+        <img src="assets/logo-kelas.jpeg" alt="Logo XI TKJ FOUR">
+
+        <span>XI TKJ FOUR</span>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">Home</a>
+
+        <a href="struktur.html">Struktur</a>
+
+        <a href="anggota.html">Anggota</a>
+
+        <a href="piket.html">Jadwal Piket</a>
+
+        <a href="pelajaran.html">Jadwal Pelajaran</a>
+
+        <a class="active"
+           href="galeri.html">
+            Galeri
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="container page">
+
+    <h1>GALERI KELAS</h1>
+
+    <h3 class="center">
+        XI TKJ FOUR
+    </h3>
+
+
+    <!-- FOTO BERSAMA -->
+
+    <section>
+
+        <h2 class="center">
+            FOTO UTAMA
+        </h2>
+
+        <div
+            class="gallery-main"
+            onclick="openGallery('Foto Utama')">
+
+            <img src="assets/home-foto.jpeg">
+
+            <span>
+                Klik untuk melihat foto
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- MOMEN -->
+
+    <section>
+
+        <h2 class="center">
+            MOMEN-MOMEN XI TKJ FOUR
+        </h2>
+
+
+        <div class="gallery-grid">
+
+
+            <div class="gallery-item">
+
+                <h3>FOTO BERSAMA</h3>
+
+                <img
+                    src="assets/galeri/foto bersama/foto bersama1.jpeg"
+        onclick="openGallery([
+            'assets/galeri/foto bersama/foto bersama1.jpeg',
+            'assets/galeri/foto bersama/foto bersama2.jpeg',
+            'assets/galeri/foto bersama/foto bersama3.jpeg',
+        ])"
+                    alt="Foto Bersama">
+            </div>
+
+
+            <div class="gallery-item">
+
+    <h3>FOTO RANDOM</h3>
+
+    <img
+        src="assets/galeri/foto random/foto random1.jpeg"
+        onclick="openGallery([
+            'assets/galeri/foto random/foto random1.jpeg',
+            'assets/galeri/foto random/foto random2.jpeg',
+            'assets/galeri/foto random/foto random3.jpeg',
+            'assets/galeri/foto random/foto random4.jpeg',
+            'assets/galeri/foto random/foto random5.jpeg',
+            'assets/galeri/foto random/foto random6.jpeg',
+            'assets/galeri/foto random/foto random7.jpeg',
+            'assets/galeri/foto random/foto random8.jpeg',
+            'assets/galeri/foto random/foto random9.jpeg',
+            'assets/galeri/foto random/foto random10.jpeg'
+            
+        ])"
+        alt="Foto Random">
+
+</div>
+
+            <div class="gallery-item">
+
+                <h3>FOTO APA SAJA</h3>
+
+                <img
+                    src="assets/foto-kelas.svg"
+                    onclick="openGallery('Foto APA SAJA')">
+
+            </div>
+
+
+            <div class="gallery-item">
+
+                <h3>FOTO KEGIATAN</h3>
+
+                <img
+                    src="assets/foto-kelas.svg"
+                    onclick="openGallery('Foto Kegiatan')">
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- VIDEO -->
+
+<section class="video-section">
+
+    <h2 class="center">
+        VIDEO
+    </h2>
+
+    <div class="video-grid">
+
+        <div
+            class="video-card"
+            onclick="openVideo('Video Kegiatan')">
+
+            <video
+        src="assets/galeri/video kegiatan/video kegiatan1.mp4"
+        muted
+        preload="metadata"
+        playsinline>
+    </video>
+
+            <span>▶</span>
+
+            <p>
+                Video Kegiatan
+            </p>
+
+        </div>
+
+    <div
+    class="video-card"
+    onclick="openVideo('Video Random')">
+
+    <video
+        src="assets/galeri/video random/video random1.mp4"
+        muted
+        preload="metadata"
+        playsinline>
+    </video>
+
+    <span>▶</span>
+
+    <p>
+        Video Random
+    </p>
+
+</div>
+
+</div>
+
+</section>
+
+
+    <!-- UPLOAD -->
+
+    <button
+        class="upload-button"
+        onclick="openUploadModal()">
+
+        ＋ UPLOAD FOTO/VIDEO
+
+    </button>
+
+
+    <!-- CATATAN -->
+
+    <section class="note-box">
+
+        <h3>CATATAN</h3>
+
+        <p>
+            “Kami datang dari berbagai karakter, memiliki cerita dan
+            impian yang berbeda, tetapi dipertemukan dalam satu ruang
+            dan satu perjalanan. Seperti sebuah jaringan yang
+            menghubungkan banyak perangkat, kebersamaan menghubungkan
+            kami dengan berbagai karakter dan cerita. Kami belajar
+            bersama, berkembang bersama, dan saling membantu dalam
+            menghadapi setiap tantangan. Setiap hari yang kami lewati
+            bersama akan menjadi bagian dari cerita yang tidak akan
+            terlupakan. Di dalam satu kelas, kami belajar bukan hanya
+            tentang pelajaran, tetapi juga tentang kebersamaan,
+            persahabatan, kerja sama, dan bagaimana saling mendukung
+            satu sama lain. Mungkin suatu saat nanti kami akan berjalan
+            menuju jalan masing-masing, tetapi semua tawa, perjuangan,
+            dan kenangan yang tercipta bersama akan selalu menjadi
+            bagian dari perjalanan kami.”
+        </p>
+
+    </section>
+
+</main>
+
+
+<!-- MODAL GALERI -->
+
+<div id="galleryModal"
+     class="modal">
+
+    <div class="modal-content">
+
+        <button
+            class="close"
+            onclick="closeGallery()">
+            ×
+        </button>
+
+        <h2 id="galleryTitle">
+            Galeri
+        </h2>
+
+        <img
+            id="galleryImage"
+            src="assets/foto-kelas.svg">
+
+        <div class="slider-buttons">
+
+    <button onclick="previousGalleryImage()">
+        ❮
+    </button>
+
+    <button onclick="nextGalleryImage()">
+        ❯
+    </button>
+
+</div>
+
+    </div>
+
+</div>
+  
+
+<!-- MODAL VIDEO -->
+
+<!-- MODAL VIDEO -->
+
+<div id="videoModal" class="modal">
+
+    <div class="modal-content video-modal-content">
+
+        <button
+            class="close"
+            onclick="closeVideo()">
+            ×
+        </button>
+
+        <h2 id="videoTitle">
+            Video Random
+        </h2>
+
+        <video
+            id="videoPlayer"
+            controls
+            playsinline>
+        </video>
+
+        <div class="slider-buttons">
+
+            <button onclick="previousVideo()">
+                ❮
+            </button>
+
+            <button onclick="nextVideo()">
+                ❯
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MODAL UPLOAD -->
+
+<div id="uploadModal" class="modal">
+
+    <div class="modal-content upload-form">
+
+        <button
+            class="close"
+            onclick="closeUploadModal()">
+            ×
+        </button>
+
+        <h2>UPLOAD FOTO/VIDEO</h2>
+
+        <label>
+            Jenis
+
+            <select id="uploadType">
+                <option>Foto</option>
+                <option>Video</option>
+            </select>
+        </label>
+
+
+        <label>
+            Kategori
+
+            <select id="uploadCategory">
+                <option>Foto Bersama</option>
+                <option>Foto Random</option>
+                <option>Foto</option>
+                <option>Foto Kegiatan</option>
+            </select>
+        </label>
+
+
+        <div class="upload-file-section">
+
+    <div class="upload-file-title">
+        Pilih Foto/Vidio
+    </div>
+
+    <div class="file-upload-box">
+
+        <input
+            id="uploadFile"
+            type="file"
+            accept="image/*,video/*"multiple>
+
+        <label
+            for="uploadFile"
+            class="file-upload-button">
+
+            <span>＋</span>
+
+            <strong>Klik untuk memilih file</strong>
+
+            <small>Foto / Video</small>
+
+        </label>
+        
+    <div id="selectedFiles" class="selected-files"></div>
+
+    </div>
+
+</div>
+
+
+        <button
+            class="submit-upload"
+            onclick="submitUpload()">
+
+            ✈ KIRIM UNTUK DITINJAU
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer class="social-footer">
+
+    <div class="separator"></div>
+
+    <h2>IKUTI KAMI</h2>
+
+    <p>◎ Instagram &nbsp; @ofc.xltkj4</p>
+
+    <p>♪ TikTok &nbsp; @tekajefour</p>
+
+    <small>
+        © XI TKJ FOUR • Teknik Komputer dan Jaringan • RHN38
+    </small>
+
+</footer>
+
+<script type="module" src="firebase-services.js"></script>
+<script src="script.js"></script>
+
+</body>
+
+</html>
